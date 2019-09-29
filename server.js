@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const uploadRouter = require("./routes/api/image-upload");
+const db = require("./config/dbconnection");
 
 const app = express();
 
