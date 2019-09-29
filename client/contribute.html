@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="custom.css" rel="stylesheet">
+    <title>How is the weather</title>
+  </head>
+  <body>
+        <header id="mypoint">
+                
+                <div class="navbar navbar-dark bg-dark box-shadow">
+                  <div class="container d-flex justify-content-between">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                      <strong>HOW IS THE WEATHER IN</strong>
+                    </a>
+                    <div class="form-inline" >
+                            <input id="pac-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <button  onsubmit="thisEvent()" class="btn btn-outline-success my-2 my-sm-0" >Submit</button>
+                    </div>
+                    <div><a href="contribute.html">Contribute</a></div>
+                  </div>
+                </div>
+              </header>
+          
+              <main role="main">
+          
+          
+                <div id="visibilityOF" class="album py-5 bg-light">
+                  <div class="container">
+                        <div class="breadcrumb">Please click a picture and upload it sing following uploader.</div>
+                    <div class="row">
+                        <div class="col-md-6">
+ 
+                                <div class="text-center"><img src="images/contribute.jpg" width="400" height="450"/></div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="text-center">Upoad a picture</h3>
+                            
+                                <form>
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                          <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                          <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                        </div>
+                                      </form>
+                        </div>
+                    </div>
+                            
+
+                      
+                    </div>
+                  </div>
+                </div>
+          
+              </main>
+          
+              <script>
+
+                    var input = document.getElementById("submit");
+
+                    function activePlacesSearch(){
+                        var input = document.getElementById('pac-input');
+                        var autocomplete = new google.maps.places.Autocomplete(input);
+                        var place = autocomplete.getPlace();
+                        // console.log(place.geometry.location.lat());
+                        
+                        
+                    }
+
+                    console.log("Hey I am there");
+                    function thisEvent(){
+                        console.log("Hey I am here");
+                        document.getElementsByID("mypoint").style.display="none";
+
+                        event.preventDefault();
+
+                    };
+
+
+
+
+              </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="custom_script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlOc0FbwfkgJwR38GPsqgBeE_lCF4UsV0&libraries=places&callback=activePlacesSearch"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  </body>
+</html>

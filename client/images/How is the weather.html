@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)file:///C:/xampp/htdocs/v-app/contribute.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:18px;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}
+</style>
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./How is the weather_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./How is the weather_files/custom.css" rel="stylesheet">
+    <title>How is the weather</title>
+  <script type="text/javascript" charset="UTF-8" src="./How is the weather_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./How is the weather_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./How is the weather_files/controls.js.download"></script><script type="text/javascript" charset="UTF-8" src="./How is the weather_files/places_impl.js.download"></script><script type="text/javascript" charset="UTF-8" src="./How is the weather_files/AuthenticationService.Authenticate"></script></head>
+  <body>
+        <header id="mypoint">
+                
+                <div class="navbar navbar-dark bg-dark box-shadow">
+                  <div class="container d-flex justify-content-between">
+                    <a href="file:///C:/xampp/htdocs/v-app/contribute.html#" class="navbar-brand d-flex align-items-center">
+                      <strong>HOW IS THE WEATHER IN</strong>
+                    </a>
+                    <div class="form-inline">
+                            <input id="pac-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+                            <button onsubmit="thisEvent()" class="btn btn-outline-success my-2 my-sm-0">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </header>
+          
+              <main role="main">
+          
+          
+                <div id="visibilityOF" class="album py-5 bg-light">
+                  <div class="container">
+          
+                            <div class="breadcrumb">Do you wany to contribute ?</div>
+                            <div class="text-center"><img src="./How is the weather_files/contribute.jpg" width="400" height="450"></div>
+                            
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="validatedCustomFile" required="">
+                                  <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                  <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                </div>
+                              
+                      
+                    </div>
+                  </div>
+                
+          
+              </main>
+          
+              <script>
+
+                    var input = document.getElementById("submit");
+
+                    function activePlacesSearch(){
+                        var input = document.getElementById('pac-input');
+                        var autocomplete = new google.maps.places.Autocomplete(input);
+                        var place = autocomplete.getPlace();
+                        // console.log(place.geometry.location.lat());
+                        
+                        
+                    }
+
+                    console.log("Hey I am there");
+                    function thisEvent(){
+                        console.log("Hey I am here");
+                        document.getElementsByID("mypoint").style.display="none";
+
+                        event.preventDefault();
+
+                    };
+
+
+
+
+              </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./How is the weather_files/custom_script.js.download"></script>
+<script src="./How is the weather_files/js"></script>
+    <script src="./How is the weather_files/jquery-3.3.1.slim.min.js.download" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  
+<div class="pac-container pac-logo" style="display: none; width: 198px; position: absolute; left: 945px; top: 47px;"></div></body></html>
