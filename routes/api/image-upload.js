@@ -65,4 +65,35 @@ router.post("/image-upload", (req, res) => {
   });
 });
 
+router.get("/information/:latitude/:longitude", (req, res) => {
+  let latitude = parseFloat(req.params.latitude);
+  let longitude = parseFloat(req.params.longitude);
+
+  let sql =
+    "SELECT * FROM WEATHER_INFORMATION WHERE latitude=" +
+    db.escape(latitude) +
+    " AND longitude=" +
+    db.escape(longitude);
+
+  db.query(sql, (err, result) => {
+    if (err) {
+      return res.status(500).json(err);
+    } else if (result.length <= 0) {
+      return res
+        .status(404)
+        .json({
+          error:
+            "Either the location information is not found or weather information on that location is not found"
+        });
+    }
+    result.forEach(row => {
+      weatherInfo = {
+        imageLink: row.imageLink,
+        weatherDescription: row.weatherDescription
+      };
+    });
+    res.status(200).json({ weatherInfo });
+  });
+});
+
 module.exports = router;
